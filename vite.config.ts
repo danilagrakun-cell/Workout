@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/Worcout-tracker/',
+  base: '/Workout/',
   plugins: [
     react(),
     VitePWA({
@@ -18,18 +18,18 @@ export default defineConfig({
         background_color: '#0f172a',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/Worcout-tracker/',
-        start_url: '/Worcout-tracker/',
+        scope: '/Workout/',
+        start_url: '/Workout/',
         lang: 'ru',
         icons: [
           {
-            src: '/Worcout-tracker/icons/icon-192.png',
+            src: '/Workout/icons/icon-192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: '/Worcout-tracker/icons/icon-512.png',
+            src: '/Workout/icons/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
@@ -38,7 +38,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
-        navigateFallback: '/Worcout-tracker/index.html',
+        navigateFallback: '/Workout/index.html',
         runtimeCaching: [
           {
             urlPattern: ({ request }) =>
